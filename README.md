@@ -8,7 +8,7 @@
 [] - Header (top of page)
 
 ## Containers
-[] - FormControl (handleSubmit, handleChange)
+[X] - FormControl (handleSubmit, handleChange)
 
 ## Hooks
 [] - useGet
@@ -18,7 +18,7 @@
 [] - useDelete
 
 ## Services
-[] - hitAPI (fetch(url, object with headers, body))
+[] - api (fetch(url, object with headers, body))
 
 ### Order
 ——— 
