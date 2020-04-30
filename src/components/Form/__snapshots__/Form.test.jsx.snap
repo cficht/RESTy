@@ -6,55 +6,66 @@ exports[`Form component renders Form 1`] = `
 >
   <form>
     <label>
-      Url:
+      URL:
       <input
+        name="url"
+        onChange={[Function]}
         type="text"
+        value=""
       />
     </label>
     <div>
       <label>
         <input
           name="method"
+          onChange={[Function]}
           type="radio"
-          value="get"
+          value="GET"
         />
         GET
       </label>
       <label>
         <input
           name="method"
+          onChange={[Function]}
           type="radio"
-          value="post"
+          value="POST"
         />
         POST
       </label>
       <label>
         <input
           name="method"
+          onChange={[Function]}
           type="radio"
-          value="put"
+          value="PUT"
         />
         PUT
       </label>
       <label>
         <input
           name="method"
+          onChange={[Function]}
           type="radio"
-          value="patch"
+          value="PATCH"
         />
         PATCH
       </label>
       <label>
         <input
           name="method"
+          onChange={[Function]}
           type="radio"
-          value="delete"
+          value="DELETE"
         />
         DELETE
       </label>
     </div>
     <textarea
+      name="body"
+      onChange={[Function]}
       placeholder="Body"
+      value=""
     />
     <button
       type="submit"

@@ -2,13 +2,13 @@
 
 
 ## Components (Presentation)
-[] - Form (url input, method radio, json text, submit, header stretch )
+[X] - Form (url input, method radio, json text, submit, header stretch )
 [] - Display (response)
 [] - List (map)
 [] - Header (top of page)
 
 ## Containers
-[] - ControlForm (handleSubmit, handleFormData)
+[] - FormControl (handleSubmit, handleChange)
 
 ## Hooks
 [] - useGet
@@ -19,7 +19,6 @@
 
 ## Services
 [] - hitAPI (fetch(url, object with headers, body))
-
 
 ### Order
 ——— 
