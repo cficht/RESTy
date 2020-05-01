@@ -17,6 +17,7 @@ exports[`Form component renders Form 1`] = `
     <div>
       <label>
         <input
+          checked={false}
           name="method"
           onChange={[Function]}
           type="radio"
@@ -26,6 +27,7 @@ exports[`Form component renders Form 1`] = `
       </label>
       <label>
         <input
+          checked={false}
           name="method"
           onChange={[Function]}
           type="radio"
@@ -35,6 +37,7 @@ exports[`Form component renders Form 1`] = `
       </label>
       <label>
         <input
+          checked={false}
           name="method"
           onChange={[Function]}
           type="radio"
@@ -44,6 +47,7 @@ exports[`Form component renders Form 1`] = `
       </label>
       <label>
         <input
+          checked={false}
           name="method"
           onChange={[Function]}
           type="radio"
@@ -53,6 +57,7 @@ exports[`Form component renders Form 1`] = `
       </label>
       <label>
         <input
+          checked={false}
           name="method"
           onChange={[Function]}
           type="radio"
