@@ -7,7 +7,7 @@ const FormControl = () => {
   const [url, setUrl] = useState('');
   const [method, setMethod] = useState('GET');
   const [body, setBody] = useState('');
-  const [response, setResponse] = useState('');
+  const [response, setResponse] = useState({});
 
   const handleChange = ({ target }) => {
     if(target.name === 'url') setUrl(target.value);
@@ -33,6 +33,7 @@ const FormControl = () => {
     }
     fetchResponse(url, requestObject)
       .then(response => setResponse(response));
+    console.log(response);
   };
 
   return (

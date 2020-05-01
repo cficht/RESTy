@@ -1,15 +1,13 @@
 import React from 'react';
+import ReactJson from 'react-json-view';
 import PropTypes from 'prop-types';
 import styles from './Display.css';
 
-const Display = ({ response }) => {
-  const responseList = Object.keys(response).map(keyValue => {
-    return <li key={keyValue}>{keyValue}: {response[keyValue]}</li>;
-  });
 
+const Display = ({ response }) => {
   return (
     <div className={styles.Display}>
-      <p>{responseList}</p>
+      <ReactJson src={response} theme="tomorrow" name="Response"/>
     </div>
   );
 };
