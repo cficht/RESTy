@@ -29,9 +29,18 @@
 - console log response
 - DISPLAY COMPONENT
 - include headers in display
-
 - LIST COMPONENT
 - append request to list
+- style requests
+- save requests
+
+- click requests
+- test requests
+- no repeat requests
+- no bad requests
+- API TEST
+
 - HEADER COMPONENT
 - add headers/auth to FORM
 - refactor for hooks
+- style
