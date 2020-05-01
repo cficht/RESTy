@@ -32,5 +32,6 @@
 
 - LIST COMPONENT
 - append request to list
-- add headers/auth to FORM
 - HEADER COMPONENT
+- add headers/auth to FORM
+- refactor for hooks
