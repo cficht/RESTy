@@ -28,5 +28,9 @@
 - FETCH SERVICE
 - console log response
 - DISPLAY COMPONENT
+- include headers in display
+
 - LIST COMPONENT
-- append method to list
+- append request to list
+- add headers/auth to FORM
+- HEADER COMPONENT
