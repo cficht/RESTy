@@ -1,13 +1,8 @@
-.Form {
+.Display {
   width: 50%;
   background-color: darkblue;
   color: white;
   padding: 20px;
   margin: 20px;
-}
-
-textarea {
-  display: block;
-  margin: auto;
-  width: 100%;
+  
 }

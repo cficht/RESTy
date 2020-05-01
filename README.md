@@ -3,7 +3,7 @@
 
 ## Components (Presentation)
 [X] - Form (url input, method radio, json text, submit, header stretch )
-[] - Display (response)
+[X] - Display (response)
 [] - List (map)
 [] - Header (top of page)
 
@@ -18,7 +18,7 @@
 [] - useDelete
 
 ## Services
-[] - api (fetch(url, object with headers, body))
+[X] - api (fetch(url, object with headers, body))
 
 ### Order
 ——— 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Form from '../components/Form/Form';
 import { fetchResponse } from '../services/api';
+import Display from '../components/Display/Display';
 
 const FormControl = () => {
   const [url, setUrl] = useState('');
@@ -37,6 +38,7 @@ const FormControl = () => {
   return (
     <>
       <Form url={url} method={method} body={body} onChange={handleChange} onSubmit={handleSubmit}/>
+      <Display response={(response)} />
     </>
   );
 };
