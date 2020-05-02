@@ -58,9 +58,18 @@ const FormControl = () => {
       url: url,
       method: method
     };
-    const newRequests = [...requests, userRequest];
-    setRequests(newRequests);
-    localStorage.setItem('requests', JSON.stringify(newRequests));
+
+    let alreadyExists = false;
+    requests.find(request => {
+      if((request.method === userRequest.method) && (request.url === userRequest.url)) alreadyExists = true;
+    });
+
+    if(!alreadyExists) {
+      const newRequests = [...requests, userRequest];
+      setRequests(newRequests);
+      localStorage.setItem('requests', JSON.stringify(newRequests));
+    }
+    alreadyExists = false;
   };
 
   const handleClear = () => {

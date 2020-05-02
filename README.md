@@ -4,18 +4,18 @@
 ## Components (Presentation)
 [X] - Form (url input, method radio, json text, submit, header stretch )
 [X] - Display (response)
-[] - List (map)
+[X] - List (map)
 [] - Header (top of page)
 
 ## Containers
 [X] - FormControl (handleSubmit, handleChange)
 
 ## Hooks
-[] - useGet
-[] - usePost
-[] - usePut
-[] - usePatch
-[] - useDelete
+[]? - useGet
+[]? - usePost
+[]? - usePut
+[]? - usePatch
+[]? - useDelete
 
 ## Services
 [X] - api (fetch(url, object with headers, body))
@@ -36,11 +36,10 @@
 - API TEST
 - disable textarea for delete and get
 - click requests
-
 - no repeat requests
-- no bad requests
 - test requests?
 
+- update disabled textarea on history load
 - HEADER COMPONENT
 - refactor for hooks
 - style
