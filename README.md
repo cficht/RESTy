@@ -34,11 +34,13 @@
 - style requests
 - save requests
 
+- API TEST
+- disable textarea for delete and get
 - click requests
 - test requests
 - no repeat requests
 - no bad requests
-- API TEST
+
 
 - HEADER COMPONENT
 - add headers/auth to FORM
