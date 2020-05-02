@@ -33,16 +33,15 @@
 - append request to list
 - style requests
 - save requests
-
 - API TEST
 - disable textarea for delete and get
 - click requests
-- test requests
+
 - no repeat requests
 - no bad requests
-
+- test requests?
 
 - HEADER COMPONENT
-- add headers/auth to FORM
 - refactor for hooks
 - style
+- add headers/auth to FORM

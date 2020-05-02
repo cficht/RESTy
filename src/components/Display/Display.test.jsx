@@ -5,6 +5,7 @@ import Display from './Display';
 describe('Display component', () => {
   it('renders Display', () => {
     const wrapper = shallow(<Display 
+      headers={{}}
       response={{}}/>);
     expect(wrapper).toMatchSnapshot();
   });

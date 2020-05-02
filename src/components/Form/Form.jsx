@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Form.css';
 
-const Form = ({ url, method, body, onChange, onSubmit }) => (
+const Form = ({ url, method, body, disable, onChange, onSubmit }) => (
   <div className={styles.Form}>
     <form onSubmit={onSubmit}>
       <label>URL:<input type="text" name="url" value={url} onChange={onChange}></input></label> 
@@ -13,7 +13,7 @@ const Form = ({ url, method, body, onChange, onSubmit }) => (
         <label><input type="radio" name="method" value="PATCH" checked={method === 'PATCH'} onChange={onChange} />PATCH</label>
         <label><input type="radio" name="method" value="DELETE" checked={method === 'DELETE'} onChange={onChange} />DELETE</label>
       </div>
-      <textarea placeholder="Body" name="body" value={body} onChange={onChange}></textarea>
+      <textarea placeholder="Body" name="body" value={body} onChange={onChange} disabled={disable}></textarea>
       <button type="submit">Submit</button>
     </form>
   </div>
@@ -23,6 +23,7 @@ Form.propTypes = {
   url: PropTypes.string,
   method: PropTypes.string,
   body: PropTypes.string,
+  disable: PropTypes.bool,
   onChange: PropTypes.func,
   onSubmit: PropTypes.func
 };

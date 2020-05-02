@@ -15,6 +15,11 @@
     margin: 10px;
   }
 
+  li:hover {
+    background-color: darkblue;
+    color: white;
+  }
+
   h3 {
     margin-block-start: 0;
     margin-block-end: 0;

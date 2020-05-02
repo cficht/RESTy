@@ -6,8 +6,11 @@ describe('Form component', () => {
   it('renders Form', () => {
     const wrapper = shallow(<Form 
       url=""
+      method=""
       body=""
-      onChange={() => {}}/>);
+      disable={true}
+      onChange={() => {}}
+      onSubmit={() => {}}/>);
     expect(wrapper).toMatchSnapshot();
   });
 });
