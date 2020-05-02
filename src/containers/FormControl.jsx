@@ -19,16 +19,18 @@ const FormControl = () => {
     if(storedReqs) setRequests(storedReqs);
   }, []);
 
+  useEffect(() => {
+    if(method === 'GET' || method === 'DELETE') {
+      setDisable(true);
+    } else if(method === 'POST' || method === 'PUT' || method === 'PATCH') {
+      setDisable(false);
+    }
+  }, [method]);
+
   const handleChange = ({ target }) => {
     if(target.name === 'url') setUrl(target.value);
     if(target.name === 'method') setMethod(target.value);
     if(target.name === 'body') setBody(target.value);
-
-    if(target.value === 'GET' || target.value === 'DELETE') {
-      setDisable(true);
-    } else if(target.value === 'POST' || target.value === 'PUT' || target.value === 'PATCH') {
-      setDisable(false);
-    }
   };
 
   const handleSubmit = () => {

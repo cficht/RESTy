@@ -38,8 +38,8 @@
 - click requests
 - no repeat requests
 - test requests?
-
 - update disabled textarea on history load
+
 - HEADER COMPONENT
 - refactor for hooks
 - style

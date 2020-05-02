@@ -1,14 +1,22 @@
 .Form {
-  background-color: darkblue;
-  color: white;
+  background-color: #27496d;
+  border-radius: 10px;
+  font-family: sans-serif;
+  color: #dae1e7;
   padding: 20px;
-  margin: 20px;
 
   input[type=text] {
+    font-size: 15px;
     width: 100%;
+    margin-bottom: 10px;
+  }
+
+  input[type=radio] {
+    margin-bottom: 10px;
   }
 
   textarea {
+    font-size: 15px;
     display: block;
     margin: auto;
     width: 100%;
@@ -18,4 +26,15 @@
   textarea:disabled {
     background: #dddddd;
   }
+
+  button {
+    background-color: #142850;
+    color: #dae1e7;
+    font-size: 15px;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
 }
