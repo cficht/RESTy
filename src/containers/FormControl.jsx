@@ -66,10 +66,19 @@ const FormControl = () => {
 
     fetchResponse(url, requestObject)
       .then(response => { 
-        setResponse(response.response);
-        setHeaders(response.headers);     
+        if(!response.headers && !response.response || (!response.ok)) {
+          setResponse(response.response);
+          setHeaders(response.headers);  
+          throw Error ('Bad Request');
+        } else {
+          setResponse(response.response);
+          setHeaders(response.headers);    
+          handleSave(saveObject);
+        }
       });
+  };
 
+  const handleSave = (saveObject) => {
     let alreadyExists = false;
     requests.find(request => {
       if(request.method === saveObject.method && request.url === saveObject.url && request.body === saveObject.body) alreadyExists = true;

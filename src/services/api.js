@@ -7,9 +7,11 @@ export const fetchResponse = (url, request) => {
         .then(response => {
           const responseObj = {
             headers: headers,
-            response: response
+            response: response,
+            ok: res.ok
           };
           return responseObj;      
-        });     
+        })
+        .catch(error => error);    
     });
 };

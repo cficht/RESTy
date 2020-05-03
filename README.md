@@ -44,7 +44,8 @@
 - double requests
 - wrong body info
 - save JSON info
+- empty/bad requests
 
-- save header info
 - add headers/auth to FORM
+- save header info
 - refactor for hooks
