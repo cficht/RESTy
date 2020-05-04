@@ -5,10 +5,17 @@ import List from '../components/List/List';
 import { fetchResponse } from '../services/api';
 import styles from './FormControl.css';
 
+const base64 = require('base-64');
+
 const FormControl = () => {
   const [url, setUrl] = useState('');
   const [method, setMethod] = useState('GET');
   const [body, setBody] = useState('');
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [token, setToken] = useState('');
+  const [authOn, setAuthOn] = useState('');
 
   const [disable, setDisable] = useState(true);
 
@@ -31,6 +38,9 @@ const FormControl = () => {
     if(target.name === 'url') setUrl(target.value);
     if(target.name === 'method') setMethod(target.value);
     if(target.name === 'body') setBody(target.value);
+    if(target.name === 'username') setUsername(target.value);
+    if(target.name === 'password') setPassword(target.value);
+    if(target.name === 'token') setToken(target.value);
   };
 
   const handleSubmit = () => {
@@ -64,6 +74,9 @@ const FormControl = () => {
       };
     }
 
+    if(authOn === 'basic') requestObject.headers['Authorization'] = `Basic ${base64.encode(`${username}:${password}`)}`;
+    if(authOn === 'bearer') requestObject.headers['Authorization'] = `Bearer ${token}`;
+    
     fetchResponse(url, requestObject)
       .then(response => { 
         if(!response.headers && !response.response || (!response.ok)) {
@@ -103,13 +116,17 @@ const FormControl = () => {
     setBody(body);
   };
 
+  const handleHeaders = ({ target }) => {
+    setAuthOn(target.value);
+  };
+
   return (
     <div className={styles.FormControl}>
       <div className={styles.left}>
         <List requests={requests} handleClear={handleClear} handleLoad={handleLoad}/>
       </div>
       <div className={styles.right}>
-        <Form url={url} method={method} body={body} disable={disable} onChange={handleChange} onSubmit={handleSubmit}/>
+        <Form url={url} method={method} body={body} username={username} password={password} token={token} disable={disable} onChange={handleChange} onSubmit={handleSubmit} handleHeaders={handleHeaders}/>
         <Display headers={headers} response={response} />
       </div>
     </div>

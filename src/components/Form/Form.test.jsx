@@ -8,9 +8,13 @@ describe('Form component', () => {
       url=""
       method=""
       body=""
+      username=""
+      password=""
+      token=""
       disable={true}
       onChange={() => {}}
-      onSubmit={() => {}}/>);
+      onSubmit={() => {}}
+      handleHeaders={() => {}}/>);
     expect(wrapper).toMatchSnapshot();
   });
 });
