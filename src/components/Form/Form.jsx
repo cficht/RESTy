@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Form.css';
 
-const Form = ({ url, method, body, username, password, token, disable, onChange, onSubmit, handleHeaders }) => (
+const Form = ({ url, method, body, username, password, token, disable, onChange, onSubmit }) => (
   <div className={styles.Form}>
     <form onSubmit={onSubmit}>
       <div className={styles.formLeft}>    
@@ -20,19 +20,19 @@ const Form = ({ url, method, body, username, password, token, disable, onChange,
       <div className={styles.formRight}>       
         <div className={styles.authDiv}>
           <h3>Basic Auth</h3>
-          <label><input type="radio" name="auth" value="basic" onChange={handleHeaders} /> ON </label>
+          <label><input type="radio" name="auth" value="basic" onChange={onChange} /> ON </label>
           <br></br>
           <input placeholder="Username" type="text" name="username" value={username} onChange={onChange}></input>
           <input placeholder="Password" type="text" name="password" value={password} onChange={onChange}></input>
         </div>
         <div className={styles.tokenDiv}>
           <h3>Bearer Token</h3>
-          <label><input type="radio" name="auth" value="bearer" onChange={handleHeaders} /> ON </label>
+          <label><input type="radio" name="auth" value="bearer" onChange={onChange} /> ON </label>
           <br></br>
           <input placeholder="Bearer Token" type="text" name="token" value={token} onChange={onChange}></input> 
         </div>
         <div className={styles.extraDiv}>
-          <label><input type="radio" name="auth" value="off" onChange={handleHeaders} /> NO AUTH </label>
+          <label><input type="radio" name="auth" value="off" onChange={onChange} /> NO AUTH </label>
         </div>
       </div>
     </form>
@@ -48,8 +48,7 @@ Form.propTypes = {
   token: PropTypes.string,
   disable: PropTypes.bool,
   onChange: PropTypes.func,
-  onSubmit: PropTypes.func,
-  handleHeaders: PropTypes.func
+  onSubmit: PropTypes.func
 };
 
 export default Form;

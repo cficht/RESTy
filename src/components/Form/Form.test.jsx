@@ -13,8 +13,7 @@ describe('Form component', () => {
       token=""
       disable={true}
       onChange={() => {}}
-      onSubmit={() => {}}
-      handleHeaders={() => {}}/>);
+      onSubmit={() => {}}/>);
     expect(wrapper).toMatchSnapshot();
   });
 });

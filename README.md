@@ -46,7 +46,8 @@
 - save JSON info
 - empty/bad requests
 - add headers/auth to FORM
-
 - body cant be child of div
+- refactor / custom hooks
+
+LATER:
 - save header info
-- refactor for hooks

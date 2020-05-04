@@ -5,9 +5,9 @@ import './App.css';
 
 export default function App() {
   return (
-    <body>
+    <div>
       <Header />
       <FormControl />
-    </body>
+    </div>
   );
 }

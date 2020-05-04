@@ -41,6 +41,7 @@ const FormControl = () => {
     if(target.name === 'username') setUsername(target.value);
     if(target.name === 'password') setPassword(target.value);
     if(target.name === 'token') setToken(target.value);
+    if(target.name === 'auth') setAuthOn(target.value);
   };
 
   const handleSubmit = () => {
@@ -105,19 +106,15 @@ const FormControl = () => {
     alreadyExists = false;
   };
 
-  const handleClear = () => {
-    localStorage.clear();
-    setRequests([]);
-  };
-
   const handleLoad = (url, method, body) => {
     setUrl(url);
     setMethod(method);
     setBody(body);
   };
 
-  const handleHeaders = ({ target }) => {
-    setAuthOn(target.value);
+  const handleClear = () => {
+    localStorage.clear();
+    setRequests([]);
   };
 
   return (
@@ -126,7 +123,7 @@ const FormControl = () => {
         <List requests={requests} handleClear={handleClear} handleLoad={handleLoad}/>
       </div>
       <div className={styles.right}>
-        <Form url={url} method={method} body={body} username={username} password={password} token={token} disable={disable} onChange={handleChange} onSubmit={handleSubmit} handleHeaders={handleHeaders}/>
+        <Form url={url} method={method} body={body} username={username} password={password} token={token} disable={disable} onChange={handleChange} onSubmit={handleSubmit} />
         <Display headers={headers} response={response} />
       </div>
     </div>
