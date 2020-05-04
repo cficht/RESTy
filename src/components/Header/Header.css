@@ -1,0 +1,21 @@
+.Header {
+  background-color: #27496d;
+  border-radius: 10px;
+  font-family: sans-serif;
+  color: #dae1e7;
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  h1 {
+    font-size: 4em;
+    margin-block-start: 0.25em;
+    margin-block-end: 0.25em;
+  }
+
+  p {
+    font-size: 17px;
+    font-style: italic;
+  }
+}
